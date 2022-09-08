@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+
+<head> 
+<title>Table insertRow() method in HTML</title>
+<style>
+table,
+td {
+  border: 1px solid black ;
+  }
+  body{
+  text-align: center;
+  
+} 
+</style>
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+
+
+<p>STUDENT RECORDS</p>
+
+<table id="myTable" align="center">
+  <tr>
+    <td>1</td>
+    <td>Ramesh</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>rajesh</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Rakesh</td>
+  </tr>
+</table>
+<br>
+
+<input type='text' id='cellOne' />
+<input type='text' id='cellTwo' />
+
+<button onclick="myFunction()">ADD ROW</button>
+
+</body>
+<script>
+
+
+function myFunction() 
+{
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(0);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  cell1.innerHTML = document.getElementById('cellOne').value;
+  cell2.innerHTML = document.getElementById('cellTwo').value;
+}
+</script>
+
+
+
+  
+
